@@ -1,0 +1,103 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Cotización</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" required>
+          <div class="invalid-feedback">
+            Por favor, Ingrese su nombre
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom02" class="form-label">Contacto</label>
+          <input type="email" class="form-control" id="validationCustom02" placeholder="mail@mail.com" required>
+          
+          <div class="invalid-feedback">
+            Ingrese un e-mail
+          </div>
+        </div>
+      <!--  <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>-->
+    
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Modelo elegido</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Seleccione...</option>
+            <option>Mate</option>
+            <option>Organizador de escritorio</option>
+            <option>Souvenir</option>
+            <option>Personalizado</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor, seleccione una opción.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom04" class="form-label">Cantidad a cotizar</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+                Por favor, indique cantidad.
+            </div>
+          </div>
+
+        <div class="col-md-12">
+          <label for="validationCustom05" class="form-label">Comentarios</label>
+          <input type="text" class="form-control" id="validationCustom05" placeholder="Detalles de su pedido personalizado">
+         <!-- <div class="invalid-feedback">
+            Por favor, Indique detalles a tener en cuenta (lugar de entrega, diseño personalizado, etc.).
+          </div>-->
+        </div>
+
+       
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+        </div>
+      </form>
+
+    
+     
+</body>
+
+<script>
+  
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        else {
+            alert ("Datos recibidos!")
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+
+</html>
