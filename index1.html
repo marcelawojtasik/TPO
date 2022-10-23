@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<main>
+		<form class="formulario" id="formulario"></form>
+
+		<!--Nombre-->
+		<div class="form3d" id="3dform">
+			<label for="nombre" class="form3d-label">Nombre</label>
+			<div class="form3d-input">
+				<input type="text" class="form-input" name="Nombre" id="Nombre" placeholder="Maria">
+				<i class="form-validacion-error fas fa-times-circle"></i>
+			</div>
+			<p class="form3d-input-error">Complete su nombre</p>
+		</div>
+
+		<!--Contacto-->
+		<div class="form3d" id="3dform">
+			<label for="contacto" class="form3d-label">Contacto</label>
+			<div class="form3d-input">
+				<input type="email" class="form-input" name="Contacto" id="Contacto" placeholder="mail@mail.com">
+				<i class="form-validacion-error fas fa-times-circle"></i>
+				<p class="form3d-input-error">Complete su e-mail</p>
+			</div>
+
+		</div>
+
+		<!--Modelo elegido-->
+		<div class="form3d" id="3dform">
+			<label for="modelo-elegido" class="form3d-label">Modelo elegido</label>
+			<div class="form3d-input">
+				<input type="text" class="form-input" name="modelo-elegido" id="modelo-elegido">
+				<i class="form-validacion-error fas fa-times-circle"></i>
+			</div>
+			<p class="form3d-input-error">Indique modelo seleccionado</p>
+		</div>
+
+		<!--Cantidad a cotizar-->
+		<div class="form3d" id="3dform">
+			<label for="cantidad" class="form3d-label">Cantidad</label>
+			<div class="form3d-input">
+				<input type="text" class="form-input" name="cantidad" id="cantidad">
+				<i class="form-validacion-error fas fa-times-circle"></i>
+			</div>
+			<p class="form3d-input-error">Indique cantidad a cotizar</p>
+		</div>
+
+		<!--Comentarios-->
+		<div class="form3d" id="3dform">
+			<label for="comentarios" class="form3d-label">Comentarios</label>
+			<div class="form3d-input">
+				<input type="text" class="form-input" name="comentarios" id="comentarios">
+				<i class="form-validacion-error fas fa-times-circle"></i>
+			</div>
+			<p class="form3d-input-error">Si desea un producto personalizado, aclarelo aquí</p>
+		</div>
+
+
+		<div class="form3d-mensaje" id="form3d-mensaje">
+			<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Por favor complete el formulario correctamente
+			</p>
+		</div>
+
+		<div class="form3d form3d-button-enviar">
+			<button type="submit" class="form3d-button">Enviar</button>
+			<p class="form-mensaje-ok" id="form-mensaje-ok">Formulario enviado con éxito!</p>
+
+		</div>
+
+
+	</main>
+
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
